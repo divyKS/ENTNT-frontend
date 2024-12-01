@@ -24,7 +24,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-teal-500">
+    <>
+    <div className="flex items-center justify-around min-h-screen bg-gradient-to-r from-blue-500 to-teal-500">
       <form
         onSubmit={handleSubmit}
         className="max-w-md mx-auto bg-white p-6 shadow-md rounded-md"
@@ -80,8 +81,34 @@ const Login = () => {
         >
           Login
         </button>
+        
+      <div className="p-2 max-w-xs mx-auto bg-white rounded-md shadow-sm overflow-hidden">
+          <div className="text-xs">Testing accounts below</div>
+          <table className="min-w-full bg-white">
+            <thead>
+              <tr>
+                <th className="py-2 text-left text-gray-600 text-xs font-semibold border">Type</th>
+                <th className="py-2 text-left text-gray-600 text-xs font-semibold border">Username</th>
+                <th className="py-2 text-left text-gray-600 text-xs font-semibold border">Password</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-100">
+                <td className="py-1 text-gray-800 text-xs border">User</td>
+                <td className="py-1 text-gray-800 text-xs border">DS</td>
+                <td className="py-1 text-gray-800 text-xs border">1234</td>
+              </tr>
+              <tr className="hover:bg-gray-100">
+                <td className="py-1 text-gray-800 text-xs border">Admin</td>
+                <td className="py-1 text-gray-800 text-xs border">SD</td>
+                <td className="py-1 text-gray-800 text-xs border">1234</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </form>
     </div>
+    </>
   );
 };
 
